@@ -5,12 +5,27 @@ import './App.css'
 
 function App() {
   // let counter=5
+  // const addValue=()=>{
+  //   counter += 1
+  //   console.log("counter",counter);
+  // }
 
 let [counter,setCounter] = useState(15);
  const addValue=()=>{
   if(counter<20){
-    counter = counter + 1;
-    setCounter(counter)
+    // counter = counter + 1;
+    // setCounter(counter)
+
+    //yaha pe counter increse nahi kar raha hai
+    // setCounter(counter+1)
+    // setCounter(counter+1)
+    // setCounter(counter+1)
+    // setCounter(counter+1)
+
+    //ab counter increase kar raha hai
+    setCounter(prevCounter => prevCounter+1)
+    setCounter(prevCounter => prevCounter+1)
+    setCounter(prevCounter => prevCounter+1)
   }
   }
   const removeValue=()=>{
