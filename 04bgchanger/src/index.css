@@ -2,3 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+button {
+    border: 1px solid transparent;
+    font-weight: 500;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+  
+  button:hover {
+    border-color: #56d425;
+  }
+  
