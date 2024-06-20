@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.start:hover{
+  opacity: 60%;
+}
+.stop:hover{
+  opacity: 60%;
+}

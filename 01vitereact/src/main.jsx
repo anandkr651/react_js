@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+// import App from './App.jsx'
 
 // function Myapp(){
 //   return(
@@ -35,7 +35,8 @@ const ReactElement=React.createElement(
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <App />
   // <Myapp />
-  // <ReactElement />
+  // Myapp()
+  // <ReactElement /> //object ko aise access nahi kiya jata hai
   // anotherElement
   ReactElement
 )

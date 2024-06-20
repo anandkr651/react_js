@@ -1,0 +1,13 @@
+1.  In the basicreact folder 
+we go to the terminal (ctrl + shift + `) and write the 'npx create-react-app' . then installing start . in the package.json file ,we can see the scripts and see the start. after that we can go to the terminal and type the 'cd basicreact' . we can type the 'npm run start' then we click 'ctrl + click' on the host file. then we can see the project.
+
+build folder we can ignore it . node_modules folder jo hai 'npm install' se ban jata hai. .gitignore jo hai git mi kay kay push karna hai wah isme likhana hota hai. package-lock.json file is similar to package.json file. but isme dependencies lock ho jati hai ki eseme  version mi chalaga . in the public folder there is a manifest.json file in this file is seen when we can see the project in the mobile .robots.txt is a search engine 
+
+basicreact -> public -> index.html
+
+
+2. In the 01vitereact folder
+we go to the terminal (ctrl + shift + `) and write the 'npm create vite@latest' . then installing start .after that we can type the 'npm i' then node_modules bundler install . in the package.json file ,we can see the scripts and see the dev. after that we can go to the terminal and type the 'cd 01vitereact' . we can type the 'npm run dev' then we click 'ctrl + click' on the host file. then we can see the project 
+
+01vitereact -> src
+chai.jsx -> jsx name tab rekhete jab ham component banete hai. component means when we export the function name
