@@ -1,9 +1,8 @@
 import { useState } from "react";
-
-import Myapp from "./card";
+import Myapp from "./Mybutton1";
 
 function App() {
-    const [count,setcount]=useState(0)
+    const [count,setcount]=useState(2)
     
     function handleClick(){
         setcount(count+1);
@@ -11,8 +10,8 @@ function App() {
     return (
         <>
         <h1>Counter that update both</h1>
-        <Myapp user={count} onClick={handleClick}/>
-        <Myapp user={count} onClick={handleClick}/>
+        <Myapp user={count} onclick={handleClick}/>
+        <Myapp user={count} onclick={handleClick}/>
         </>
     );
 }

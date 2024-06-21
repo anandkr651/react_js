@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function App (){
  
- let [count,setcount] =useState(0);
+ let [count,setcount] =useState(3);
 
  function handleClick(){
     setcount(count+1);
@@ -12,7 +12,7 @@ function App (){
         <>
         <button onClick={handleClick}>
          clicked {count} times
-        </button>
+        </button><br />
         </>
     );
 }

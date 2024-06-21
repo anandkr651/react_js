@@ -11,3 +11,11 @@ we go to the terminal (ctrl + shift + `) and write the 'npm create vite@latest' 
 
 01vitereact -> src
 chai.jsx -> jsx name tab rekhete jab ham component banete hai. component means when we export the function name
+
+3. useState Hooks
+the react useState hook allows us to track state in a function component.state generally refer to data or properties that need to be tracking in an application.useState accepts an initial state and returns two values:
+ --- The current state.
+ --- A function that updates the state.
+
+4.useCallback Hooks
+The React useCallback Hook returns a memoized callback function.Think of memoization as caching a value so that it does not need to be recalculated.This allows us to isolate resource intensive functions so that they will not automatically run on every render.The useCallback Hook only runs when one of its dependencies update. the useCallback returns a memoized function.

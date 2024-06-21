@@ -1,9 +1,9 @@
-function App ({user,onClick}){
+function App ({user,onclick}){
     return(
         <>
-        <button onClick={onClick}>
+        <button onClick={onclick}>
          clicked {user} times
-        </button>
+        </button><br />
         </>
     );
 }

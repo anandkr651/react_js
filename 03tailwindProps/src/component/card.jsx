@@ -1,6 +1,6 @@
 // import React from "react"
 
-function Card({Username,BtnText}){
+function Card({Username,BtnText="visit me"}){
   // console.log(username);
   // console.log("props",props);
     return(
@@ -18,10 +18,13 @@ function Card({Username,BtnText}){
       debitis?
     </p>
     <button className="mt-2 inline-flex cursor-pointer items-center text-sm font-semibold text-black">
-      {BtnText ||"visit"} →
+      {BtnText} →
     </button>
+    {/* <button className="mt-2 inline-flex cursor-pointer items-center text-sm font-semibold text-black">
+      {BtnText ||"visit"} →
+    </button> */}
   </div>
 </div>
-    )
+    ) 
 }
 export default Card
