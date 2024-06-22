@@ -1,15 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+// import App from './App.jsx'
 import './index.css'
-import Name from './component/name.jsx'
+import Name from './component/name'
+// import Marks from './component/result'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <>
-    <App />
-    <hr />
-    <Name />
+    {/* <App /> */}
+    <Name/>
     </>
   </React.StrictMode>,
 )

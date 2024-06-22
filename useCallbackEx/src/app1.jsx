@@ -1,4 +1,4 @@
-//you can go to the console and see that hello,app1 is display when we clicked the addition button(*2) times display the hello,app1 in the console 
+// 1. you can go to the console and see that hello,app1 is display when we clicked the addition button(*2) times display the hello,app1 in the console 
 
 // import { useState } from 'react'
 // function App1() {
@@ -9,18 +9,18 @@
 // }
 // export default App1
 
-//you can go to the console and see that hello,app1 is display when we clicked the addition button then hello,app1 is not increasing.
+// 2. you can go to the console and see that hello,app1 is display when we clicked the addition button then hello,app1 is not increasing.
 
-// import { React ,memo } from 'react'
+// import { React ,memo } from 'react' //important
 // function App1() {
 //     console.log("hello,app1");
 //   return (
 //     <div></div>
 //   )
 // }
-// export default memo(App1)
+// export default memo(App1)    //important
 
-//you can go to the console and see that hello,app1 is display when we clicked the addition button(*2) times display the hello,app1 in the console. in this case we can passes the props.
+// 3. you can go to the console and see that hello,app1 is display when we clicked the addition button(*2) times display the hello,app1 in the console. in this case we can passes the props.
 
 // import { React ,memo } from 'react'
 // function App1({user}) {
@@ -31,7 +31,7 @@
 // }
 // export default memo(App1)
 
-//you can go to the console and see that hello,app1 is display when we clicked the addition button then hello,app1 is not increasing.because we can use the useCallback hook.
+// 4 you can go to the console and see that hello,app1 is display when we clicked the addition button then hello,app1 is not increasing.because we can use the useCallback hook.
 
 // import { React ,memo } from 'react'
 // function App1({user}) {

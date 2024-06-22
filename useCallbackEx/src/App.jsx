@@ -18,24 +18,28 @@ const learning =useCallback(()=>{
 },[count])
 
   return (
+    /*1*/
+    // <>
+    // <h1>{add}</h1>
+    //  <App1/>
+    //  <button onClick={()=>setAdd(add+1)}>Addition</button>
+    // </>
+     
+    /*2*/
     // <>
     // <h1>{add}</h1>
     //  <App1/>
     //  <button onClick={()=>setAdd(add+1)}>Addition</button>
     // </>
 
-    // <>
-    // <h1>{add}</h1>
-    //  <App1/>
-    //  <button onClick={()=>setAdd(add+1)}>Addition</button>
-    // </>
-
+    /*3*/
     // <>
     // <h1>{add}</h1>
     //  <App1 user={learning}/>
     //  <button onClick={()=>setAdd(add+1)}>Addition</button>
     // </>
 
+    /*4*/
     //  <>
     //  <h1>{add}</h1>
     //   <App1 user={learning}/>
