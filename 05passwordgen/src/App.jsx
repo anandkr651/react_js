@@ -1,10 +1,3 @@
-/*in this project we can used four types of hooks 
-1. useState =
-2. useCallback =
-3. useEffect =
-4. useRef =*/
-
-
 import { useState, useCallback, useEffect, useRef } from "react";
 
 function App() {
@@ -66,7 +59,7 @@ function App() {
             <input
               type="range"
               min={8}
-              max={100}
+              max={20}
               value={length}
               className="cursor-pointer"
               onChange={(e) => {
