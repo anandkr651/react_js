@@ -19,3 +19,6 @@ the react useState hook allows us to track state in a function component.state g
 
 4.useCallback Hooks
 The React useCallback Hook returns a memoized callback function.Think of memoization as caching a value so that it does not need to be recalculated.This allows us to isolate resource intensive functions so that they will not automatically run on every render.The useCallback Hook only runs when one of its dependencies update. the useCallback returns a memoized function.
+
+5.reactRouter ->src ->component ->header ->header.jsx
+we can use link tag inplace a tag because in a tag the page is refresh but react has no concept of refresh. a tag mi hamlog href ka use karete hai but in link tag we can use the 'to' in place of href.
