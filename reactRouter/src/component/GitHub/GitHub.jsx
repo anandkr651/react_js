@@ -1,19 +1,7 @@
-import React from 'react'
-import { useState } from 'react'
-import { useEffect } from 'react'
 import { useLoaderData } from 'react-router-dom'
 
 function GitHub() {
     const data=useLoaderData()
-//     const [data,setData] = useState([])
-//   useEffect(()=>{
-//     fetch('https://api.github.com/users/anandkr651')
-//     .then((res)=>res.json())
-//     .then((data)=>{
-//         console.log(data);
-//         setData(data)
-//     })
-//   },[])
   return (
     <div className='text-center m-4 bg-gray-600 p-4 text-3xl text-white'>
       GitHub followers: {data.followers}
@@ -28,3 +16,26 @@ export const githuninfoloader =async ()=>{
     const response=await fetch('https://api.github.com/users/anandkr651')
     return response.json()
 }
+
+//OR
+
+// import { useState,useEffect } from 'react'
+// function GitHub() {
+//       const [data,setData] = useState([])
+//     useEffect(()=>{
+//       fetch('https://api.github.com/users/anandkr651')
+//       .then((res)=>res.json())
+//       .then((data)=>{
+//           console.log(data);
+//           setData(data)
+//       })
+//     },[])
+//     return (
+//       <div className='text-center m-4 bg-gray-600 p-4 text-3xl text-white'>
+//         GitHub followers: {data.followers}
+//         <img src={data.avatar_url} alt="Git picture" width={300}/>
+//       </div>
+//     )
+//   }
+//   export default GitHub
+
