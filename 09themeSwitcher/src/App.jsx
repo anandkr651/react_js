@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "./App.css";
 import { ThemeProvider } from "./Context/Theme";
 import Theme from './component/Theme';
 import Card from './component/Card'

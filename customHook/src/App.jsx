@@ -12,7 +12,7 @@ function App() {
     <>
     {
        data && data.map((item)=>{
-        return <p key={item.id}>{item.title}</p>
+        return <p key={item.id} className='child' >{item.title}</p>
        })
     }
     </>
