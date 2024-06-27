@@ -1,3 +1,5 @@
+//we can pass the props
+
 import { useState } from "react";
 import Myapp from "./Mybutton1";
 

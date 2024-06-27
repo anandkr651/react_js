@@ -1,4 +1,3 @@
-import React from 'react'
 import { useState } from 'react'
 
 function Card() {
@@ -11,7 +10,6 @@ function Card() {
     <div>
       <h1>counter that can be reset</h1>
        <button onClick={handleclick}>clicked {counter} times</button> <br />
-       
       </div>
   )
 }

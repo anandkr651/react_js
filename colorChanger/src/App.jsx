@@ -2,7 +2,7 @@ import { useCallback, useState,useRef } from 'react'
 
 function App() {
   const [color, setColor]=useState("blue")
-  const interref=useRef(null)
+  const changeref=useRef(null)
 
 
   const randomColor = useCallback (()=>{
@@ -15,14 +15,14 @@ function App() {
   },[])
 
   const startchanging = useCallback(()=>{
-    if(interref.current===null)
-      interref.current=setInterval(randomColor,1000)
+    if(changeref.current===null)
+      changeref.current=setInterval(randomColor,1000)
   },[randomColor])
   
   const stopchanging=useCallback(()=>{
-    if(interref.current !== null)
-      clearInterval(interref.current)
-    interref.current=null
+    if(changeref.current !== null)
+      clearInterval(changeref.current)
+    changeref.current=null
   },[])
 
   
