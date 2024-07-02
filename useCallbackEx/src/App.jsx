@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react'
-import App1 from './app1'
+import App1 from './App1'
 
 function App() {
   let [add, setAdd] = useState(0)
@@ -34,9 +34,9 @@ const learning =useCallback(()=>{
 
     /*3*/
     // <>
-    // <h1>{add}</h1>
+    //  <h1>{add}</h1>
     //  <App1 user={learning}/>
-    //  <button onClick={()=>setAdd(add+1)}>Addition</button>
+    //  <button onClick={()=>setAdd(add+1)}>Addition</button> 
     // </>
 
     /*4*/
