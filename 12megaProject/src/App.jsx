@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import { useDispatch } from 'react-redux'
-import authservice from './appwrite/Auth'
-import {login,logout} from './store/AuthSlice'
-import { Footer } from './component/Index'
+import authservice from './appwrite/auth'
+import {login,logout} from './store/authSlice'
+import { Footer } from './component'
 import { Outlet } from 'react-router-dom'
+import {Header} from './component'
 
 function App() {
-  const [loading ,setLoading] = useState(false)
+  const [loading ,setLoading] = useState(true)
   const dispatch = useDispatch()
 
   useEffect(()=>{
@@ -24,9 +25,9 @@ function App() {
   return !loading ?(
     <div className='flex flex-wrap content-between'>
       <div className='w-full block'>
-        <header/>
+        <Header/>
         <main >
-         todo: {/* <Outlet /> */}
+         todo: <Outlet /> 
           </main>
         <Footer/>
       </div>

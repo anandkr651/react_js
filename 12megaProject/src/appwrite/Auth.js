@@ -21,7 +21,7 @@ export class Authservice{
             return userAccount
           }
         }catch(error){
-            console.log("appwrite service :: creteAccount :: error",error);
+            console.log("Appwrite service :: creteAccount :: error",error);
         }
     }
 
@@ -29,14 +29,14 @@ export class Authservice{
         try {
            return await this.account.createEmailSession(email,password)
         } catch (error) {
-            console.log("appwrite service :: login :: error",error);
+            console.log("Appwrite service :: login :: error",error);
         }
     }
     async getCurrentUser(){
         try {
            return await this.account.get()
         } catch (error) {
-            console.log("appwrite service :: getCurrentUser :: error",error);
+            console.log("Appwrite service :: getCurrentUser :: error",error);
         }
         return null;
     }
@@ -44,7 +44,7 @@ export class Authservice{
         try {
             await this.account.deleteSessions()
         } catch (error) {
-            console.log("appwrite service :: logout :: error",error);
+            console.log("Appwrite service :: logout :: error",error);
         }
     }
 }

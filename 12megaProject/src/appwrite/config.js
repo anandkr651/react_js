@@ -28,7 +28,7 @@ export class Service {
         }
       )
     } catch (error) {
-      console.log("appwrite service :: createPost :: error", error);
+      console.log("Appwrite service :: createPost :: error", error);
     }
   }
 
@@ -46,7 +46,7 @@ export class Service {
         }
       )
     } catch (error) {
-      console.log("appwrite service :: updatePost :: errror", error);
+      console.log("Appwrite service :: updatePost :: errror", error);
     }
   }
   async deletePost(slug) {
