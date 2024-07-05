@@ -1,58 +1,53 @@
 import { useState } from "react";
-import Data from "./index";
+import data from "./index";
 
 function App() {
-  const [count, setCount] = useState(null);
-  const [enable, setenable] = useState(false);
-  const [multiple, setmultiple] = useState([]);
+  const [select, setSelect] = useState(null);
+  const [enable, setEnable] = useState(false);
+  const [multiple, setMultiple] = useState([]);
 
-  function handleSingle(selection) {
-    setCount(selection === count ? null : selection);
+  function handleSingle(getCurrentId) {
+    // console.log(getCurrentId);
+    setSelect(getCurrentId == select ? null : getCurrentId);
+    // console.log(select); //state is the asyncronous so the value of select not update imediatily. it can show the previous value.
   }
-  function handleMulti(selection) {
-    let copymultiple = [...multiple];
-    const findindex = copymultiple.indexOf(selection);
-    if (findindex === -1) copymultiple.push(selection);
-    else copymultiple.splice(findindex, 1);
 
-    setmultiple(copymultiple);
+  function handleMultiple(getCurrentId) {
+    let copyData = [...multiple];
+    const findIndex = copyData.indexOf(getCurrentId);
+    // console.log(findIndex);
+    if (findIndex === -1) copyData.push(getCurrentId);
+    else copyData.splice(findIndex, 1);
+
+    setMultiple(copyData);
   }
+  console.log(multiple);
   return (
-    <>
-      <div className="text-center w-1/2 mx-auto py-4 my-20">
-        <button
-          onClick={() => setenable(!enable)}
-          className="bg-lime-500 px-6 rounded-md font-semibold "
-        >
-          Enable Multi Selection
-        </button>
-        {Data.map((dataitem) => (
-          <div className="bg-red-300 my-6 rounded-xl" key={dataitem.id}>
+    <div className="text-center">
+      <button className="bg-green-400 rounded-md px-4 my-3 " onClick={() => setEnable(!enable)}>Enable multiple option</button>
+      <div>
+        {data.map((dataItem) => (
+          <div key={dataItem.id}>
             <div
+              key={dataItem.id}
+              className="bg-slate-600 my-4 px-20 flex justify-between "
               onClick={
                 enable
-                  ? () => handleMulti(dataitem.id)
-                  : () => handleSingle(dataitem.id)
+                  ? () => handleMultiple(dataItem.id)
+                  : () => handleSingle(dataItem.id)
               }
-              className="font-medium cursor-pointer"
             >
-              <h3>{dataitem.question}</h3>
+              <h1>{dataItem.question}</h1>
+              <span></span>
             </div>
             {enable
-              ? multiple.indexOf(dataitem.id) !== -1 && (
-                  <div className="px-11 text-center cursor-pointer">
-                    {dataitem.answer}
-                  </div>
-                )
-              : count === dataitem.id && (
-                  <div className="px-11 text-center cursor-pointer">
-                    {dataitem.answer}
-                  </div>
-                )}
+              ? multiple.indexOf(dataItem.id) !== -1 && <p>{dataItem.answer}</p>
+              : (select === dataItem.id) && <p className="mx-5">{dataItem.answer}</p>}
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }
+
 export default App;

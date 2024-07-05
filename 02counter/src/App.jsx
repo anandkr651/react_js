@@ -32,6 +32,7 @@ function App() {
   const removeValue = () => {
     if (counter > 0) {
       setCounter(counter - 1);
+      console.log(counter); //when we see the counter value in the console then previous value is printed because of usestate is the asynchronous, which means if you log the state immediately after calling the update function you will see the old state value 
     }
   };
   return (

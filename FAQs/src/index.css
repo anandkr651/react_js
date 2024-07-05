@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-button:hover{
+button:active{
     border: 1px solid rgb(113, 238, 82);
+}
+span{
+    padding-inline: 8px;
+    background-color: aqua;
+    transition-duration: 1s;
+    transition-property: all;
+    transition-delay: 0.1s;
+}
+span:hover{
+    background-color: rgb(251, 255, 244);
+    border-radius: 40%;
+    transform: rotate(180deg);    
+}
+span::after{
+    content: '&';
 }
