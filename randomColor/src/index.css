@@ -2,9 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.start:hover{
-  opacity: 60%;
-}
-.stop:hover{
-  opacity: 60%;
+button{
+  background-color: beige;
+  margin: 10px;
+  padding-inline: 6px;
 }

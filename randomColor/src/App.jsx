@@ -1,41 +1,43 @@
-import { useCallback, useState,useRef } from 'react'
+import {useState} from 'react'
 
 function App() {
-  const [color, setColor]=useState("blue")
-  const changeref=useRef(null)
-
-
-  const randomColor = useCallback (()=>{
-    const hex='0123456789ABCDEF'
-    let color='#'
+  const [type, setType] = useState()
+  const [color, setColor] = useState()
+  
+  function randomColor(length){
+    return Math.floor(Math.random()*length)
+  }
+  function handleHexColor(){
+    const hex=[0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F']
+    let hexColor ='#'
     for(let i=0;i<6;i++){
-      color +=hex[Math.floor(Math.random()*16)]
+      hexColor += hex[randomColor(hex.length)]
     }
-    setColor(color)
-  },[])
-
-  const startchanging = useCallback(()=>{
-    if(changeref.current===null)
-      changeref.current=setInterval(randomColor,1000)
-  },[randomColor])
-  
-  const stopchanging=useCallback(()=>{
-    if(changeref.current !== null)
-      clearInterval(changeref.current)
-    changeref.current=null
-  },[])
-
-  
+    setColor(hexColor)
+  }
+  function handleRGBColor(){
+    const r=randomColor(256)
+    const g=randomColor(256)
+    const b=randomColor(256)
+    setColor(`rgb(${r},${g},${b})`)
+  }
+  // useEffect(()=>{
+  //  if(type==='rgb') randomColor()
+  //   else randomColor()
+  // },[type])
+   
   return (
     <>
-    <div className="w-full h-screen duration-200" style={{ backgroundColor: color }}>
-     <div className='fixed flex justify-center gap-5 bottom-11 inset-x-4'>
-     <button onClick={startchanging} className='bg-slate-400 rounded-xl py-4 px-4 font-medium start'>start</button>
-     <button onClick={stopchanging} className='bg-slate-400 rounded-xl py-4 px-4 font-medium stop '>stop</button>
-     </div>
+    <div style={{background:color}} className='w-full h-screen duration-200 text-center'>
+        <button onClick={()=>setType('hex')}>Create Hex Color </button>
+        <button onClick={()=>setType('rgb')} >Create RGB Color</button>
+        <button onClick={type ==='hex' ? handleHexColor: handleRGBColor} >Create Random Color</button>
+        <h1>{type==='hex'?"hex color":"rgb color"}</h1>
+        <h1>{color}</h1>
     </div>
     </>
   )
 }
 
 export default App
+
