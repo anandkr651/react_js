@@ -6,6 +6,7 @@ function App({noOfstar=5}) {
   const [hover,setHover]=useState(0)
 
   function handleClick(getCurrentIndex){
+    // console.log(getCurrentIndex);
     setRating(getCurrentIndex)
   }
   function handleMouseMove(getCurrentIndex){
