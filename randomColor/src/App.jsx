@@ -20,12 +20,7 @@ function App() {
     const g=randomColor(256)
     const b=randomColor(256)
     setColor(`rgb(${r},${g},${b})`)
-  }
-  // useEffect(()=>{
-  //  if(type==='rgb') randomColor()
-  //   else randomColor()
-  // },[type])
-   
+  }   
   return (
     <>
     <div style={{background:color}} className='w-full h-screen duration-200 text-center'>
