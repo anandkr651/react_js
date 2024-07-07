@@ -15,7 +15,7 @@ function App({ url, limit = 10, page = 1 }) {
     setCurrentSlide(currentSlide === 0 ? image.length - 1 : currentSlide - 1);
   }
   function handleNext() {
-    setCurrentSlide(currentSlide === image.length ? 0 : currentSlide + 1);
+    setCurrentSlide(currentSlide === image.length - 1 ? 0 : currentSlide + 1);
   }
 
   useEffect(() => {
