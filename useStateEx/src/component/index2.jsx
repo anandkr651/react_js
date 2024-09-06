@@ -8,7 +8,7 @@ function Form (){
          <div className="box">
             <input 
             value={name}
-            onChange={e=>setName(e.target.value)} 
+            onChange={(e)=>setName(e.target.value)} 
             className="bg-white text-black px-3 mb-4"/> <br/>
             <button onClick={()=>setAge(age+1)}>Increment age</button>
             <p>Hello, {name}. you are {age}. </p>

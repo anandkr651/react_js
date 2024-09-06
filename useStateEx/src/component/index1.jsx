@@ -2,6 +2,7 @@ import { useState } from "react";
 
 function Mycheckbox(){
     let [liked,setLiked] = useState(true)
+
     function handlechange(e){
      setLiked(e.target.checked)
     }
