@@ -14,14 +14,15 @@ function App() {
 
   function handleMultiple(getCurrentId) {
     let copyData = [...multiple];
+    // console.log(copyData);//when we click first time then we see that copydata is empty but when we clicked second time then we see that previous getCurrentId is here.
     const findIndex = copyData.indexOf(getCurrentId);
-    // console.log(findIndex);
+    // console.log(findIndex);//when we check the getCurrentId there is not happen so they return -1.
     if (findIndex === -1) copyData.push(getCurrentId);
     else copyData.splice(findIndex, 1);
 
     setMultiple(copyData);
   }
-  console.log(multiple);
+  // console.log(multiple);
   return (
     <div className="text-center">
       <button className="bg-green-400 rounded-md px-4 my-3 " onClick={() => setEnable(!enable)}>Enable multiple option</button>
