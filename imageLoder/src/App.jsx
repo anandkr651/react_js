@@ -1,26 +1,18 @@
-import { useEffect, useState,useRef } from 'react';
+import { useEffect, useState} from 'react';
 
 function App() {
   const [image, setImage] = useState([]);
   const [count, setCount] = useState(0);
   const [disableButton, setDisableButton] = useState(false);
-  const imageLoadingRef = useRef(false);
 
   async function imageLoading() {
-
-    if (imageLoadingRef.current) return;
-    imageLoadingRef.current = true;
-
-    const response = await fetch(
-      `https://dummyjson.com/products?limit=20&skip=${count * 20}`
-    );
+    const response = await fetch(`https://dummyjson.com/products?limit=20&skip=${count * 20}`);
     const data = await response.json();
 
     if (data && data.products && data.products.length) {
       setImage((prevData) => [...prevData, ...data.products]);
     }
     console.log(data);
-    imageLoadingRef.current = false;
   }
 
   useEffect(() => {
@@ -40,7 +32,7 @@ function App() {
           ? image.map((item) => (
               <div key={item.id} className="border mx-2 my-2 bg-slate-300">
                 <img src={item.thumbnail} alt={item.title}/>
-                <p className='text-cyan-900 '>{item.brand}</p>
+                <p className='text-cyan-900 '>{item.title}</p>
               </div>
             ))
           : null}
