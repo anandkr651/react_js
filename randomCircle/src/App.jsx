@@ -15,7 +15,6 @@ const getRandomcolor=()=>{
 function App() {
   const [randomCircle, setRandomCircle] = useState([])
   const [history,setHistory]=useState([])
-  const [disable,setDisable]=useState(false)
 
 const handleClick =(e)=>{
   setRandomCircle((prev)=>{
