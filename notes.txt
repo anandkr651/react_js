@@ -13,7 +13,7 @@ basicreact -> public -> index.html
 
 
 2. In the 01vitereact folder
-we go to the terminal (ctrl + shift + `) and write the 'npm create vite@latest' . then installing start .after that we can type the 'npm i' then node_modules bundler install . in the package.json file ,we can see the scripts and see the dev. after that we can go to the terminal and type the 'cd 01vitereact' . we can type the 'npm run dev' then we click 'ctrl + click' on the host file. then we can see the project 
+we go to the terminal (ctrl + `) and write the 'npm create vite@latest' . then installing start .after that we can type the 'npm i' then node_modules bundler install . in the package.json file ,we can see the scripts and see the dev. after that we can go to the terminal and type the 'cd 01vitereact' . we can type the 'npm run dev' then we click 'ctrl + click' on the host file. then we can see the project 
 
 01vitereact -> src
 chai.jsx -> jsx name tab rekhete jab ham component banete hai. component means when we export the function name
@@ -27,4 +27,4 @@ the react useState hook allows us to track state in a function component.state g
 The React useCallback Hook returns a memoized callback function.Think of memoization as caching a value so that it does not need to be recalculated.This allows us to isolate resource intensive functions so that they will not automatically run on every render.The useCallback Hook only runs when one of its dependencies update. the useCallback returns a memoized function.
 
 5.reactRouter ->src ->component ->header ->header.jsx
-we can use link tag inplace a tag because in a tag the page is refresh but react has no concept of refresh. a tag mi hamlog href ka use karete hai but in link tag we can use the 'to' in place of href.
+we can use 'link' tag inplace 'a' tag because in a tag the page is refresh but react has no concept of refresh. a tag mi hamlog href ka use karete hai but in link tag we can use the 'to' in place of href.

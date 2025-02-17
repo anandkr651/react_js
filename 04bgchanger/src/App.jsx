@@ -21,8 +21,8 @@ function App() {
 
             <button
               onClick={() => setColor("blue")}
-              className="outline-none px-4 py-1 rounded-full text-white shadow-lg bg-blue-500"
-              // style={{ background: "blue" }}
+              className="outline-none px-4 py-1 rounded-full text-white shadow-lg bg-blue-500" //yaha tailwind ka use kiye hai.
+              // style={{ background: "blue" }} //yaha css ka use kiya hai
             >
               blue
             </button>
