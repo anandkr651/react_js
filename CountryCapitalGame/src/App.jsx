@@ -58,7 +58,7 @@ if(match.size === options.length){
     <div>
       {
         options.map(item =>{
-          if(match.has(item)){
+          if(match.has(item)){ // it can remove(item) from the screen.
             return null
           }
           

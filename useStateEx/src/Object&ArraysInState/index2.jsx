@@ -12,6 +12,11 @@ function Car() {
       return { ...previousState, color: "blue" }
     });
   }
+  // OR
+
+  // function updateColor(){
+  //   setCar({...car, color: "blue"});
+  // }
 
   return (
     <div className="box my-6">

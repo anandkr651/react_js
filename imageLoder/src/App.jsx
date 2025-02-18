@@ -12,7 +12,7 @@ function App() {
     if (data && data.products && data.products.length) {
       setImage((prevData) => [...prevData, ...data.products]);
     }
-    console.log(data);
+    // console.log(data);
   }
 
   useEffect(() => {

@@ -30,12 +30,16 @@ function App({ url, limit = 10, page = 1 }) {
         className="absolute left-4 w-16 h-16 top-32"
       />
       {image.map((imageItem, index) => {
+         {/*OR */}
+        {/* {image.map((imageItem) => {  //first argument --> show element, second argument --> index, third argument --> whole array */}
         return (
           <img
             key={imageItem.id}
             src={imageItem.download_url}
             alt={imageItem.download_url}
             className={currentSlide === index ? "block" : "hidden"}
+            //OR
+            //  className={currentSlide === parseInt(imageItem.id) ? "block" : "hidden"}
           />
         );
       })}
@@ -56,8 +60,18 @@ function App({ url, limit = 10, page = 1 }) {
           ></button>
         ))}
       </span>
+      {/*OR */}
+      {/* <span className="absolute bottom-4 left-1/2 ">
+        {image.map((index) => {                  
+          return <button
+            key={index.id}
+            className={currentSlide === parseInt(index.id)? "current-indicator": "current-indicator inactive-indicator" }
+            onClick={() => setCurrentSlide(parseInt(index.id))}
+          ></button>
+        })} 
+      </span> */}
     </div>
-  );
+      );
 }
 
 export default App;

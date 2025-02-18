@@ -26,14 +26,14 @@ function App() {
     );
   };
   useEffect(() => {
-    const todos = JSON.parse(localStorage.getItem("todos")); //parse --> string is converted into json.
+    const todos = JSON.parse(localStorage.getItem("todos")); //parse --> json is converted into object.
 
     if (todos && todos.length > 0) {
       setTodo(todos);
     }
   }, []);
   useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos)); //stringify --> json is converted into string.
+    localStorage.setItem("todos", JSON.stringify(todos)); //stringify --> object is converted into json.
   }, [todos]);
 
   return (

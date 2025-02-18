@@ -13,7 +13,6 @@ function App() {
       setUserdata(data);
       setUserName("");
     }
-
     console.log(data);
   }
 

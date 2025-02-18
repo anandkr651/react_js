@@ -7,7 +7,7 @@ import Mycheckbox from './component/index1'
 import Form from './component/index2'
 import FormObject from'./Object&ArraysInState/index1'
 import Car from './Object&ArraysInState/index2'
-
+import Abc from './app/index.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <>
@@ -16,6 +16,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Form />
     <FormObject />
     <Car />
+    <Abc />
     </>
   </React.StrictMode>,
 )
